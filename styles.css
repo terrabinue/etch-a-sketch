@@ -1,0 +1,28 @@
+html {
+  background-color: #4f6d7a;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  margin: 0
+}
+
+h1 {
+  color: yellow;
+  height: 10%;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.container {
+  height: 100vh;
+  margin: 0;
+
+}
+.frame {
+  width: 60%;
+  height: 37em;
+  background-color: red;
+  position: relative;
+
+}
