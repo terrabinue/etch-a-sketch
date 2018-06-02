@@ -12,6 +12,7 @@ h1 {
   color: yellow;
   height: 10%;
   font-family: 'Permanent Marker', cursive;
+  -webkit-margin-before: 0em;
 }
 
 .container {
@@ -24,5 +25,8 @@ h1 {
   height: 37em;
   background-color: red;
   position: relative;
+}
 
+.grid {
+  display: grid-template
 }
