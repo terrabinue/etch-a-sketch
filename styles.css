@@ -19,19 +19,19 @@ h1 {
 .container {
   height: 100vh;
   margin: 0;
-
+  align-items: center;
 }
 .frame {
-  width: 60%;
-  height: 37em;
+  width: 70%;
+  height: 35.5em;
   background-color: red;
   position: relative;
 }
 
 .grid{
   background-color: #F4F3EE;
-  height: 80%;
-  margin: 0 9%;
+  height: 70%;
+  margin: 0 3%;
   border-radius: 10px;
   box-shadow: inset 0 0 5px #000;
   overflow: hidden;
@@ -41,13 +41,42 @@ h1 {
   background-color: #F5F5F5;
   width: 4em;
   height: 4em;
-  border-radius: 100px;
   position: absolute;
+  bottom: 0;
+  border-radius: 100%;
+  margin: 0.9em;
+  cursor: pointer;
+}
+
+.knob_text {
+  font-size: 15pt;
+  font-weight: 800;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Permanent Marker', cursive;
+  color: #777;
 }
 
 .knob_left {
   left: 0;
+  box-shadow: -9px 3px 0px -1px #000;
 }
+
 .knob_right {
   right: 0;
+  box-shadow: -9px 3px 0px -1px #000;
 }
+
+@media only screen and (max-width: 1800px) {
+  .frame{
+    width: 100%;
+    height: 36.8em;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .frame{
+    width: 100%;
+    height: 46em;
+  }
