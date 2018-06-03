@@ -13,7 +13,7 @@ function addCells(row, size = 16) {
   for(let cells = 0; cells < size; cells++) {
     const cell = document.createElement("div")
 
-    cell.classList.add("cell_" + cells.toString());
+    cell.classList.add("cell", cells.toString());//"cell_" + cells.toString()
     cell.style.cssText = `opacity: 0; width: ${100 / size}%`;
     cell.addEventListener("mouseover", blackHover)
     row.appendChild(cell)
