@@ -26,13 +26,13 @@ function blackHover() {
     this.style.opacity = parseFloat(this.style.opacity) + 0.2;
   }
 }
-function colorHover() {
-  const color =  "#" + Math.random().toString(16).slice(2, 8);
-  this.style.background = color;
-  if (this.style.opacity <1){
-    this.style.opacity = parseFloat(this.style.opacity) + 0.2;
-  }
-}
+//function colorHover() {
+//const color =  "#" + Math.random().toString(16).slice(2, 8);
+//this.style.background = color;
+//if (this.style.opacity <1){
+//  this.style.opacity = parseFloat(this.style.opacity) + 0.2;//
+//}
+//}
 
 function multiColorHover() {
   const cells = document.querySelectorAll(".cell")
@@ -41,6 +41,7 @@ function multiColorHover() {
       const color =  "#" + Math.random().toString(16).slice(2, 8);
       console.log(color)
       this.style.background = color;
+     // this.style.opacity = parseFloat(this.style.opacity) + 0.2;
     })
   })
 }
@@ -59,7 +60,7 @@ function clearGrid() {
 }
 
 document.querySelector(".knob_left").addEventListener("click", clearGrid)
-document.querySelector(".knob_center").addEventListener("click", colorHover)
+//document.querySelector(".knob_center").addEventListener("click", colorHover)
 document.querySelector('.knob_right').addEventListener("click", multiColorHover)
 
 const grid = document.querySelector(".grid")
