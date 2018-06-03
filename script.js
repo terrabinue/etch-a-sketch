@@ -13,7 +13,7 @@ function addCells(row, size = 16) {
   for(let cells = 0; cells < size; cells++) {
     const cell = document.createElement("div")
 
-    cell.classList.add("cell");
+    cell.classList.add("cell_" + cells.toString());
     cell.style.cssText = `opacity: 0; width: ${100 / size}%`;
     cell.addEventListener("mouseover", blackHover)
     row.appendChild(cell)
@@ -22,18 +22,25 @@ function addCells(row, size = 16) {
 
 function blackHover() {
   this.style.background = "#000";
-  this.style.opacity = parseFloat(this.style.opacity) + 0.2;
+  if (this.style.opacity <1){
+    this.style.opacity = parseFloat(this.style.opacity) + 0.2;
+  }
+}
+function colorHover() {
+  const color =  "#" + Math.random().toString(16).slice(2, 8);
+  this.style.background = color;
+  if (this.style.opacity <1){
+    this.style.opacity = parseFloat(this.style.opacity) + 0.2;
+  }
 }
 
 function multiColorHover() {
   const cells = document.querySelectorAll(".cell")
-
   cells.forEach(function(cell) {
     cell.addEventListener("mouseover", function(e) {
       const color =  "#" + Math.random().toString(16).slice(2, 8);
-
-      e.target.style.background = color;
-      e.target.style.opacity = parseFloat(this.style.opacity) + 0.2;
+      console.log(color)
+      this.style.background = color;
     })
   })
 }
@@ -52,7 +59,8 @@ function clearGrid() {
 }
 
 document.querySelector(".knob_left").addEventListener("click", clearGrid)
+document.querySelector(".knob_center").addEventListener("click", colorHover)
 document.querySelector('.knob_right').addEventListener("click", multiColorHover)
 
 const grid = document.querySelector(".grid")
-//createRows(grid, 16)
+createRows(grid, 16)

@@ -39,8 +39,8 @@ h1 {
 
 .knob {
   background-color: #F5F5F5;
-  width: 4em;
-  height: 4em;
+  width: 6em;
+  height: 6em;
   position: absolute;
   bottom: 0;
   border-radius: 100%;
@@ -60,12 +60,19 @@ h1 {
 }
 
 .knob_left {
-  left: 0;
+  left: 40px;
+  bottom: 10px;
+  box-shadow: -9px 3px 0px -1px #000;
+}
+.knob_center {
+  position: static;
+  bottom: 10px;
   box-shadow: -9px 3px 0px -1px #000;
 }
 
 .knob_right {
-  right: 0;
+  right: 40px;
+  bottom: 10px;
   box-shadow: -9px 3px 0px -1px #000;
 }
 
@@ -79,14 +86,49 @@ h1 {
   height: 100%;
 }
 
-@media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1920px) {
   .frame{
     width: 100%;
-    height: 36.8em;
+    height: 731px;
+  }
+  .grid{
+    width: 50%;
+  }
+  .knob{
+    bottom: 3;
   }
 }
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1650px) {
+     .frame{
+       width: 100%;
+       height: 731px;
+     }
+  .grid{
+    width: 60%;
+  }
+  .knob{
+    bottom: 3;
+  }
+  @media only screen and (max-width: 1250px) {
   .frame{
     width: 100%;
-    height: 46em;
+    height: 731px;
   }
+  .grid{
+    width: 70%;
+  }
+  .knob{
+    bottom: 3;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .frame{
+    width: 100%;
+    height: 731px;
+  }
+  .grid{
+      width: 90%;
+  }
+}
+}
