@@ -65,3 +65,5 @@ document.querySelector('.knob_right').addEventListener("click", multiColorHover)
 
 const grid = document.querySelector(".grid")
 createRows(grid, 16)
+//based on work from:
+//http://htmlpreview.github.io/?https://github.com/KevinMulhern/etch_a_sketch/blob/master/index.html
